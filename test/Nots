@@ -1,0 +1,889 @@
+إضافة Expanded لجميع الصفحات
+// ignore_for_file: curly_braces_in_flow_control_structures
+import 'package:flutter_app/view/Sunh.dart';
+import 'package:flutter_app/view/adv.dart';
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'view/main-azkar.dart';
+import 'view/prey_time.dart';
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      /*   appBar: AppBar(
+        backgroundColor: Colors.green[400],
+        title: const Padding(
+          padding: EdgeInsets.all(5),
+          child: Text("Home Page"),
+        ),
+      ),*/
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/image/primary_image.jpg'),
+                fit: BoxFit.cover)),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              MaterialButton(
+                onPressed: () {
+                  Get.to(() => Adv_class());
+                },
+                color: Colors.green,
+                child: const Text("اعلانات ونشاطات المركز"),
+                textColor: Colors.white,
+              ),
+              const SizedBox(height: 20),
+              MaterialButton(
+                onPressed: () {},
+                color: Colors.green,
+                child: const Text(" روابط تعليمية"),
+                textColor: Colors.white,
+              ),
+              const SizedBox(height: 20),
+              MaterialButton(
+                onPressed: () {
+                  Get.to(prey_class());
+                },
+                color: Colors.green,
+                child: const Text("أوقات الصلاة"),
+                textColor: Colors.white,
+              ),
+              const SizedBox(height: 20),
+              MaterialButton(
+                onPressed: () {
+                  Get.to(() => Sunh_class());
+                },
+                color: Colors.green,
+                child: const Text("سنة رسول الله "),
+                textColor: Colors.white,
+              ),
+              const SizedBox(height: 20),
+              MaterialButton(
+                onPressed: () {
+                  Get.to(() => Azkar_class());
+                },
+                color: Colors.green,
+                child: const Text("سنن مهجورة "),
+                textColor: Colors.white,
+              ),
+              const SizedBox(height: 20),
+              MaterialButton(
+                onPressed: () {},
+                color: Colors.green,
+                child: const Text("من نحن "),
+                textColor: Colors.white,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                  onPressed: () {
+                    Get.to(() => Azkar_class());
+                  },
+                  child: Text('من نحن'))
+              /*     Container(
+                height: 50,
+                width: 200,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.4),
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(5, 3),
+                        color: Colors.black.withOpacity(0.4),
+                        blurRadius: 10)
+                  ],
+                ),
+              ),*/
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+--------------
+import 'package:flutter_app/view/Sunh.dart';
+import 'package:flutter_app/view/adv.dart';
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'view/main-azkar.dart';
+import 'view/prey_time.dart';
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      /*   appBar: AppBar(
+        backgroundColor: Colors.green[400],
+        title: const Padding(
+          padding: EdgeInsets.all(5),
+          child: Text("Home Page"),
+        ),
+      ),*/
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/image/primary_image.jpg'),
+              fit: BoxFit.cover),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(5, 3),
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 10)
+                  ],
+                ),
+                child: TextButton(
+                  onPressed: () {
+                    Get.to(() => Adv_class());
+                  },
+                  child: const Text(
+                    "اعلانات ونشاطات المركز",
+                    style: TextStyle(color: Colors.orangeAccent, fontSize: 20),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(5, 3),
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 10)
+                  ],
+                ),
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    " روابط تعليمية",
+                    style: TextStyle(color: Colors.orangeAccent, fontSize: 25),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(5, 3),
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 10)
+                  ],
+                ),
+                child: TextButton(
+                  onPressed: () {
+                    Get.to(prey_class());
+                  },
+                  child: const Text(
+                    "أوقات الصلاة",
+                    style: TextStyle(color: Colors.orangeAccent, fontSize: 25),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(5, 3),
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 10)
+                  ],
+                ),
+                child: TextButton(
+                  onPressed: () {
+                    Get.to(() => Sunh_class());
+                  },
+                  child: const Text(
+                    "سنة رسول الله ",
+                    style: TextStyle(color: Colors.orangeAccent, fontSize: 25),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(5, 3),
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 10)
+                  ],
+                ),
+                child: TextButton(
+                  onPressed: () {
+                    Get.to(() => Azkar_class());
+                  },
+                  child: const Text(
+                    "سنن مهجورة ",
+                    style: TextStyle(color: Colors.orangeAccent, fontSize: 25),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(5, 3),
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 10)
+                  ],
+                ),
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "من نحن  ",
+                    style: TextStyle(color: Colors.orangeAccent, fontSize: 25),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+-----------------------
+azkar
+// ignore_for_file: missing_return
+
+import 'package:flutter/material.dart';
+import 'package:flutter_app/control/api-azkar.dart';
+import '../model/model-azkar.dart';
+
+class Azkar_class extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();}
+
+class _MyHomePageState extends State<Azkar_class> {
+  @override
+  Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+    return Scaffold(
+
+      body: Container(
+        height: height,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/image/Azkar_image.jpg'),
+              fit: BoxFit.cover),
+        ),
+
+        child: FutureBuilder(
+            future: APIAzkar().getapi(),
+            builder: (context, AsyncSnapshot<dynamic> snapshot) {
+              if (snapshot.hasData) {
+                List<dynamic> _responseList = snapshot.data['data']['all'];
+                List<SunehModel> _listOfSuneh = _responseList
+                    .map((e) => SunehModel.fromJson(e))
+                    .where((element) => element.type == "1")
+                    .toList();
+
+                return ListView.separated(
+                  padding: EdgeInsets.symmetric(vertical: 15),
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  primary: false,
+                  itemCount: _listOfSuneh.length,
+                  separatorBuilder: (context, index) {
+                    return Container(
+                        margin:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        color: Colors.green,
+                        height: 1);
+                  },
+                  itemBuilder: (context, index) {
+                    return  Center(
+                      child: Container(
+                        height: height * 0.4,
+                        margin: EdgeInsets.symmetric(horizontal: 40),
+                        decoration: BoxDecoration(
+                            color: Colors.green.withOpacity(0.5),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: const Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black.withOpacity(0.3))
+                            ]),
+                        child: Column(
+                          children: [
+                            SizedBox(height: 25),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  height: height * 0.3,
+                                  width: width * 0.7,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(0.5),
+                                      borderRadius: BorderRadius.circular(10),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            offset: const Offset(5, 3),
+                                            blurRadius: 10,
+                                            color: Colors.black.withOpacity(0.2))
+                                      ]),
+                                  child:Column (
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(_listOfSuneh[index].text
+                                        ,
+                                        style:  const TextStyle(
+                                            fontSize: 13, color: Colors.green),
+                                      )
+
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                          ],
+                        ),
+                      ),
+                    );
+                      //Text(_listOfSuneh[index].text);
+                  },
+                );
+              } else {
+                return Center(child: CircularProgressIndicator());
+              }
+            }),
+      ),
+    );
+  }
+}
+__________________
+about as
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
+import 'package:flutter/material.dart';
+
+class about_as_class extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<about_as_class> {
+  @override
+  Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title:const  Text("من نحن"),
+      ),
+      body: Container(
+
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/image/primary_image.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+
+        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+        constraints: BoxConstraints.expand(),
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: 15),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: height * 0.4,
+                      width: width * 0.7,
+                      margin: EdgeInsets.symmetric(horizontal: 40),
+                      decoration: BoxDecoration(
+                          color: Colors.green.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                offset: const Offset(5, 3),
+                                blurRadius: 10,
+                                color: Colors.black.withOpacity(0.3))
+                          ]),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 25),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: height * 0.3,
+                                width: width * 0.6,
+                                decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          offset: const Offset(5, 3),
+                                          blurRadius: 10,
+                                          color: Colors.black.withOpacity(0.2))
+                                    ]),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: const [
+                                    Text(
+                                      "الهيكلية  التنظيمية ",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.green),
+                                    ),
+                                    Text(
+                                      " مجلس الأمناء",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      " مجلس الادارة ",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      " قسم العلاقات العامة",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      " قسم الدعوة النسائية ",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      " قسم إدارة المشاريع والأبحاث",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      " قسم الإدارة المالية",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      "قسم الاعلام",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: height * 0.4,
+                      width: width * 0.7,
+                      margin: EdgeInsets.symmetric(horizontal: 40),
+                      decoration: BoxDecoration(
+                          color: Colors.green.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                offset: const Offset(5, 3),
+                                blurRadius: 10,
+                                color: Colors.black.withOpacity(0.3))
+                          ]),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 25),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: height * 0.3,
+                                width: width * 0.65,
+                                decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          offset: const Offset(5, 3),
+                                          blurRadius: 10,
+                                          color: Colors.black.withOpacity(0.2))
+                                    ]),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    const Text(
+                                      "أهدافنا ",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.green),
+                                    ),
+                                    Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          Text(
+                                            " تحقيق (ادع الى سبيل ربك بالحكمة والموعظة الحسنة)",
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                color: Colors.green),
+                                          ),
+                                        ]),
+                                    Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          Text(
+                                            " تمكين الدين في الفرد والمجتمع ",
+                                            style: TextStyle(
+                                                fontSize: 13,
+                                                color: Colors.green),
+                                          ),
+                                        ]),
+                                    Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          const Text(
+                                            " تحقيق الوعي ونشر العلم المبني على الأسس الصحيحة ",
+                                            style: TextStyle(
+                                                fontSize: 13,
+                                                color: Colors.green),
+                                          ),
+                                        ]),
+                                    Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          const Text(
+                                            "تصحيح المفاهيم الخاطئة لدى بعض المسلمين ",
+                                            style: TextStyle(
+                                                fontSize: 13,
+                                                color: Colors.green),
+                                          ),
+                                        ]),
+                                    Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          const Text(
+                                            "السعي إلى توحيد رؤى العمل الدعوي ",
+                                            style: TextStyle(
+                                                fontSize: 11,
+                                                color: Colors.green),
+                                          ),
+                                        ]),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: height * 0.4,
+                      width: width * 0.7,
+                      margin: EdgeInsets.symmetric(horizontal: 40),
+                      decoration: BoxDecoration(
+                          color: Colors.green.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                offset: const Offset(5, 3),
+                                blurRadius: 10,
+                                color: Colors.black.withOpacity(0.3))
+                          ]),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 25),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: height * 0.3,
+                                width: width * 0.6,
+                                decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          offset: const Offset(5, 3),
+                                          blurRadius: 10,
+                                          color: Colors.black.withOpacity(0.2))
+                                    ]),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: const [
+                                    Text(
+                                      "من نـــحن  ",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.green),
+                                    ),
+                                    Text(
+                                      " مركز مجتمعي إصلاحي يعنى بالجوانب الدعوية والإيمانية والفكرية ",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      "غير ربحي ",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      "ذو نفع عام",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                    Text(
+                                      "يمارس نشاطاته في الداخل السوري",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: height * 0.4,
+                      width: width * 0.7,
+                      margin: EdgeInsets.symmetric(horizontal: 40),
+                      decoration: BoxDecoration(
+                          color: Colors.green.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                offset: const Offset(5, 3),
+                                blurRadius: 10,
+                                color: Colors.black.withOpacity(0.3))
+                          ]),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 25),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: height * 0.3,
+                                width: width * 0.6,
+                                decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          offset: const Offset(5, 3),
+                                          blurRadius: 10,
+                                          color: Colors.black.withOpacity(0.2))
+                                    ]),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: const [
+                                    Text(
+                                      "رؤيتنا ",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.green),
+                                    ),
+                                    Text(
+                                      "  الوصول إلى مجتمع يحمل القيم الإسلامية ظاهرا وباطنا وتتجلى في أفعال أفراد مكارم الأخلاق ",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: height * 0.4,
+                      width: width * 0.7,
+                      margin: EdgeInsets.symmetric(horizontal: 40),
+                      decoration: BoxDecoration(
+                          color: Colors.green.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                offset: const Offset(5, 3),
+                                blurRadius: 10,
+                                color: Colors.black.withOpacity(0.3))
+                          ]),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 25),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: height * 0.3,
+                                width: width * 0.6,
+                                decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          offset: const Offset(5, 3),
+                                          blurRadius: 10,
+                                          color: Colors.black.withOpacity(0.2))
+                                    ]),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: const [
+                                    Text(
+                                      "رسالتنا ",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.green),
+                                    ),
+                                    Text(
+                                      " امتثالا لأمره تعالى :(ولتكن منكم أمة يدعون إلى بالخير ويأمرون بالمعروف وينهون عن المنكر, وأولئك هم المفلحون )وإيمانا منا بأهمية هذا الواجب العظيم الذي يعد ركيزة أساسية ومنطلقا هاما للنهوض بالأمة على مستوى الفرد والجماعة وسببا من أسباب النجاة من ذاب الدنيا والآخرة أسس هذا المركز ليكون منارة للعمل الدعوي المنظم الهادف راجين من الله تعالى التوفيق والسداد ",
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.green),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: height * 0.4,
+                      width: width * 0.7,
+                      margin: EdgeInsets.symmetric(horizontal: 40),
+                      decoration: BoxDecoration(
+                          color: Colors.green.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                offset: const Offset(5, 3),
+                                blurRadius: 10,
+                                color: Colors.black.withOpacity(0.3))
+                          ]),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 25),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: height * 0.3,
+                                width: width * 0.6,
+                                decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          offset: const Offset(5, 3),
+                                          blurRadius: 10,
+                                          color: Colors.black.withOpacity(0.2))
+                                    ]),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: const [
+                                    Text(
+                                      "شعارنا ",
+                                      style: TextStyle(
+                                          fontSize: 30, color: Colors.green),
+                                    ),
+                                    Text(
+                                      "دعوة وإصلاح تكاتف وعمل",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.green),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 5),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
