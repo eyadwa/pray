@@ -39,12 +39,12 @@ class _MyHomePageState extends State<Azkar_class> {
         children: [
           Container(
             height: height,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/image/primarrrry.png'),
-                   fit: BoxFit.cover
-                  ),
-            ),
+            // decoration: const BoxDecoration(
+            //   image: DecorationImage(
+            //       image: AssetImage('assets/image/primarrrry.png'),
+            //        fit: BoxFit.cover
+            //       ),
+            // ),
 
             child: FutureBuilder(
                 future: APIAzkar().getapi(),

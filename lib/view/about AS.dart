@@ -23,98 +23,104 @@ class _MyHomePageState extends State<about_as_class> {
             blurRadius: 10)
       ],
     );
+    double _height =50;
+    double _width =150;
+    Color _colors_green_accent=Colors.greenAccent;
+    final _Edit_text_style_about = TextStyle(color: Colors.black, fontSize: 15);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.greenAccent,
         title: const Text("من نحن"),
       ),
       body:
       Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/image/primary_image.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
+        // decoration: const BoxDecoration(
+        //   image: DecorationImage(
+        //     image: AssetImage('assets/image/primary_image.jpg'),
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
         padding:const  EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
        // constraints: BoxConstraints.expand(),
         child: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             const SizedBox(height: 25),
             Container(
-              height: height * 0.05,
-              width: width * 0.4,
+              height:_height,
+              width:_width,
               decoration: Box_whitee,
               child: MaterialButton(
                 onPressed: () {
                   BottmSeets1(context);
                 },
-                child: const Text("الهيكلية  التنظيمية"),
-                color: Colors.green,
+                child:  Text("الهيكلية  التنظيمية",style: _Edit_text_style_about,),
+                color: _colors_green_accent,
               ),
             ),
             const SizedBox(height: 20),
             Container(
-              height: height * 0.05,
-              width: width * 0.4,
+              height: _height,
+              width:_width,
               decoration: Box_whitee,
               child: MaterialButton(
                 onPressed: () {
                   BottmSeets2(context);
                 },
-                child: const Text("أهدافنا"),
-                color: Colors.green,
+                child:  Text("أهدافنا",style: _Edit_text_style_about,),
+                color: _colors_green_accent,
               ),
             ),
             const SizedBox(height: 20),
             Container(
-              height: height * 0.05,
-              width: width * 0.4,
+              height: _height,
+              width: _width,
               decoration: Box_whitee,
               child: MaterialButton(
                 onPressed: () {
                   BottmSeets3(context);
                 },
-                child: const Text("من نحن "),
-                color: Colors.green,
+                child:  Text("من نحن ",style: _Edit_text_style_about,),
+                color: _colors_green_accent,
               ),
             ),
             const SizedBox(height: 20),
-            Container( height: height * 0.05,
-              width: width * 0.4,
+            Container(
+              height: _height,
+              width:_width,
               decoration:Box_whitee,
               child: MaterialButton(
                 onPressed: () {
                   BottmSeets4(context);
                 },
-                child: const Text("رؤيتنا  "),
-                color: Colors.green,
+                child:  Text("رؤيتنا  " ,style: _Edit_text_style_about,),
+                color:_colors_green_accent,
               ),
             ),
             const SizedBox(height: 20),
-            Container( height: height * 0.05,
-              width: width * 0.4,
+            Container(
+              height: _height,
+              width: _width,
               decoration:Box_whitee,
               child: MaterialButton(
                 onPressed: () {
                   BottmSeets5(context);
                 },
-                child: const Text("رسالتنا"),
-                color: Colors.green,
+                child:  Text("رسالتنا" ,style: _Edit_text_style_about,),
+                color: _colors_green_accent,
               ),
             ),
             const SizedBox(height: 20),
             Container(
-              height: height * 0.05,
-              width: width * 0.4,
+              height:_height,
+              width:_width,
               decoration:Box_whitee,
               child: MaterialButton(
 
                 onPressed: () {
                   BottmSeets6(context);
                 },
-                child: const Text("شعارنا"),
-                color: Colors.green,
+                child:  Text("شعارنا" ,style: _Edit_text_style_about,),
+                color: _colors_green_accent,
               ),
             ),
           ]),

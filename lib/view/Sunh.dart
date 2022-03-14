@@ -37,11 +37,11 @@ class _MyHomePageState extends State<Sunh_class> {
     return Scaffold(
       body: Container(
         height: height,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/image/primarrrry.png'),
-              fit: BoxFit.cover),
-        ),
+        // decoration: const BoxDecoration(
+        //   image: DecorationImage(
+        //       image: AssetImage('assets/image/primarrrry.png'),
+        //       fit: BoxFit.cover),
+        // ),
         child: FutureBuilder(
             future: APIAzkar().getapi(),
             builder: (context, AsyncSnapshot<dynamic> snapshot) {

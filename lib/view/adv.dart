@@ -29,11 +29,11 @@ class _MyHomePageState extends State<Adv_class> {
     return Scaffold(
       body: Container(
         height: height,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/image/family_image.jpg'),
-              fit: BoxFit.cover),
-        ),
+        // decoration: const BoxDecoration(
+        //   image: DecorationImage(
+        //       image: AssetImage('assets/image/family_image.jpg'),
+        //       fit: BoxFit.cover),
+        // ),
         child: FutureBuilder(
             future: adv_class().adv_api(),
             builder: (context, AsyncSnapshot<dynamic> snapshot) {

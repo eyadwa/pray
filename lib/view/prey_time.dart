@@ -68,11 +68,11 @@ class _prey_time extends State<prey_class> {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/image/imagepray.png'),
-                fit: BoxFit.cover),
-          ),
+          // decoration: const BoxDecoration(
+          //   image: DecorationImage(
+          //       image: AssetImage('assets/image/imagepray.png'),
+          //       fit: BoxFit.cover),
+          // ),
           child: Center(
             child: FutureBuilder(
               future: getPTData(),
