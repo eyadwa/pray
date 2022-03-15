@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1036522227243",
+    "project_id": "pray-674cd",
+    "storage_bucket": "pray-674cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036522227243:android:864d7e6454591eea2c0c6e",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036522227243-sqj4lttal0k0tk61abc1v9j3eihrbq7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9fI2fqDtnug2UzT8EOVYPNNXbXZEamWA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036522227243-sqj4lttal0k0tk61abc1v9j3eihrbq7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
