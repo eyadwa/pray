@@ -1,14 +1,11 @@
-
-
-// ignore_for_file: curly_braces_in_flow_control_structures
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter_app/model/model_prey.dart';
 import 'package:intl/intl.dart';
+import '../Home.dart';
 
 class prey_class extends StatefulWidget {
   const prey_class({Key key}) : super(key: key);
@@ -60,12 +57,38 @@ class _prey_time extends State<prey_class> {
           color:
           Colors.black.withOpacity(0.2))
     ],);
-
+Color seem_color=Colors.greenAccent;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    int currentIndex = 0;
+    final screen = [HomePage(), HomePage()];
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.greenAccent,
+        currentIndex: currentIndex,
+        selectedLabelStyle: TextStyle(color: Colors.black),
+        selectedItemColor: Colors.black,
+        unselectedLabelStyle: TextStyle(color: Colors.black),
+        onTap: (index) => setState(() => Get.to(screen[index])),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Setting',
+              backgroundColor: Colors.greenAccent),
+        ],
+      ),
+      appBar: AppBar(title: const Text("اوقات الصلاة"),centerTitle: true,
+      backgroundColor:seem_color ),
       body: Center(
         child: Container(
           // decoration: const BoxDecoration(
@@ -108,7 +131,7 @@ class _prey_time extends State<prey_class> {
                   return Center(
                     child: Column(
                       children: [
-                        const SizedBox(height: 100),
+                        const SizedBox(height: 50),
                         Container(
                           height: height * 0.05,
                           width: width * 0.7,
@@ -360,7 +383,8 @@ class _prey_time extends State<prey_class> {
                         ),
                       ],
                     ),
-                  );}
+                  );
+                }
               },
             ),
           ),
@@ -369,16 +393,3 @@ class _prey_time extends State<prey_class> {
     );
   }
 }
-
-//       Text(
-//         snapshot.data.data.timings.fajr,
-//         style: const TextStyle(fontSize: 25),
-//       ),
-//       Text(snapshot.data.data.timings.dhuhr,
-//           style: const TextStyle(fontSize: 25)),
-//       Text(snapshot.data.data.timings.asr,
-//           style: const TextStyle(fontSize: 25)),
-//       Text(snapshot.data.data.timings.maghrib,
-//           style: const TextStyle(fontSize: 25)),
-//       Text(snapshot.data.data.timings.isha,
-//           style: const TextStyle(fontSize: 25)),

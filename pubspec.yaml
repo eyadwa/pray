@@ -46,6 +46,7 @@ dependencies:
   device_preview: any
   geolocator: any
   intl: ^0.17.0
+  webview_flutter: ^3.0.1
 
 
 dev_dependencies:

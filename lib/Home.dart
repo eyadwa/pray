@@ -1,5 +1,8 @@
 import 'package:flutter_app/view/Sunh.dart';
 import 'package:flutter_app/view/adv.dart';
+import 'package:flutter_app/view/azkar_new/home_azkar.dart';
+import 'package:flutter_app/view/browser.dart';
+// import 'package:flutter_app/view/browser.dart';
 import 'package:flutter_app/view/youtube.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -132,15 +135,37 @@ class HomePage extends StatelessWidget {
                     decoration: Container_Button,
                     child: TextButton(
                       onPressed: () {
-                        Get.to(() => about_as_class());
+                        Get.to(() => Hom_eAzkar());
                       },
-                      child: Text("من نحن  ", style: _Edit_text_style),
+                      child: Text("الاذكار اليومية", style: _Edit_text_style),
                     ),
                   ),
                 ],
               ),
-
-
+              SizedBox(height: _sizedbox_hight),
+              Container(
+                height: _highe,
+                width: _width,
+                decoration: Container_Button,
+                child: TextButton(
+                  onPressed: () {
+                    Get.to(() => about_as_class());
+                  },
+                  child: Text("من نحن  ", style: _Edit_text_style),
+                ),
+              ),
+              SizedBox(height: _sizedbox_hight),
+              Container(
+                height: _highe,
+                width: _width,
+                decoration: Container_Button,
+                child: TextButton(
+                  onPressed: () {
+                    Get.to(() => WebViewExample());
+                  },
+                  child: Text("مقرء", style: _Edit_text_style),
+                ),
+              ),
             ],
           ),
         ),
