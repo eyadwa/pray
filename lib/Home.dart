@@ -154,7 +154,7 @@ class HomePage extends StatelessWidget {
                       onPressed: () {
                         Get.to(() => Setting());
                       },
-                      child: Text("اعدادات", style: _Edit_text_style),
+                      child: Text("الاعدادات", style: _Edit_text_style),
                     ),
                   ),
                   SizedBox(width:_sizedbox_width),
@@ -171,10 +171,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
+
               SizedBox(height: _sizedbox_hight),
               Container(
                 height: _highe,
-                width: 300,
+                width: _width,
                 decoration: Container_Button,
                 child: TextButton(
                   onPressed: () {
