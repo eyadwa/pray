@@ -3,19 +3,15 @@
 // found in the LICENSE file.
 
 // ignore_for_file: public_member_api_docs
-
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
-
 class WebViewExample extends StatefulWidget {
   @override
   _WebViewExampleState createState() => _WebViewExampleState();
 }
-
 class _WebViewExampleState extends State<WebViewExample> {
   final Completer<WebViewController> _controller =
   Completer<WebViewController>();
@@ -105,7 +101,6 @@ class _WebViewExampleState extends State<WebViewExample> {
         });
   }
 }
-
 enum MenuOptions {
   showUserAgent,
   listCookies,
@@ -115,7 +110,6 @@ enum MenuOptions {
   clearCache,
   navigationDelegate,
 }
-
 class SampleMenu extends StatelessWidget {
   SampleMenu(this.controller);
 
@@ -272,7 +266,6 @@ class SampleMenu extends StatelessWidget {
     );
   }
 }
-
 class NavigationControls extends StatelessWidget {
   const NavigationControls(this._webViewControllerFuture)
       : assert(_webViewControllerFuture != null);
