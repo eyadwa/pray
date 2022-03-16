@@ -6,6 +6,7 @@ import 'package:flutter_app/view/browser.dart';
 import 'package:flutter_app/view/youtube.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'control/constroler/setting.dart';
 import 'view/about AS.dart';
 import 'view/main-azkar.dart';
 import 'view/prey_time.dart';
@@ -143,27 +144,44 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: _sizedbox_hight),
+              Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: _highe,
+                    width: _width,
+                    decoration: Container_Button,
+                    child: TextButton(
+                      onPressed: () {
+                        Get.to(() => Setting());
+                      },
+                      child: Text("الاعدادات", style: _Edit_text_style),
+                    ),
+                  ),
+                  SizedBox(width:_sizedbox_width),
+                  Container(
+                    height: _highe,
+                    width: _width,
+                    decoration: Container_Button,
+                    child: TextButton(
+                      onPressed: () {
+                        Get.to(() => WebViewExample());
+                      },
+                      child: Text("مقرء", style: _Edit_text_style),
+                    ),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: _sizedbox_hight),
               Container(
                 height: _highe,
-                width: _width,
+                width: 250,
                 decoration: Container_Button,
                 child: TextButton(
                   onPressed: () {
                     Get.to(() => about_as_class());
                   },
                   child: Text("من نحن  ", style: _Edit_text_style),
-                ),
-              ),
-              SizedBox(height: _sizedbox_hight),
-              Container(
-                height: _highe,
-                width: _width,
-                decoration: Container_Button,
-                child: TextButton(
-                  onPressed: () {
-                    Get.to(() => WebViewExample());
-                  },
-                  child: Text("مقرء", style: _Edit_text_style),
                 ),
               ),
             ],
